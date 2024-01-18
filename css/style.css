@@ -1,0 +1,126 @@
+/* REGLAS CSS 
+Consta de 2 partes:
+1. El Selector
+2. Bloque de declaraciones:{
+  Atributo:valor
+} */
+
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: navy;
+  background-color: cadetblue;
+  border-color: brown;
+  border-style: solid;
+  text-align: center;
+}
+h2 {
+  color: cadetblue;
+}
+h3 {
+  color: midnightblue;
+}
+
+/* Selectores Basicos
+  1.Etiquetas.
+  2.Identificadores - atributo id
+  3.Clases - atributo class */
+
+/* Aplicando estilos con etiquetas */
+p {
+  color: darkorange;
+}
+/* Aplicando estilos con id */
+#parrafo-2 {
+  background-color: cornflowerblue;
+}
+/*Aplicando estilos con clases */
+.bg-darkblue {
+  background-color: darkblue;
+}
+.bg-steelblue {
+  background-color: steelblue;
+}
+.text-30 {
+  font-size: 30px;
+}
+.text-35 {
+  font-size: 35px;
+}
+.text-40 {
+  font-size: 40px;
+}
+.text-white {
+  color: white;
+}
+
+.hijos_directos > li {
+  background-color: burlywood;
+}
+.hijos_descendientes b {
+  background-color: cornflowerblue;
+}
+.hermanos_general ~ li {
+  background-color: darkseagreen;
+}
+.hermanos_adyacente + li {
+  background-color: lightblue;
+}
+
+/* Selectores de atributos */
+.selectores-atributos a[href] {
+  color: orangered;
+}
+
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* El comodín del * aplica el estilo si contiene el texto en cuestión en cualquier parte */
+.selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+}
+
+/* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio */
+.selectores-atributos a[href^="http://"]
+{
+  text-decoration: none;
+}
+
+/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final */
+.selectores-atributos a[href$=".com"] {
+  background-color: black;
+}
+
+/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios */
+.selectores-atributos a[class~="cursos"] {
+  background-color: midnightblue;
+}
+
+/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio - */
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+
+.form-pseudoclases *:required {
+  border-color: yellow;
+}
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+.form-pseudoclases *:focus {
+  background-color: khaki;
+}
+.menu-pseudoclases a:visited {
+  color: darkred;
+}
+.menu-pseudoclases a:hover {
+  color: coral;
+}
+.ppseudoclases:hover {
+  font-size: 35px;
+}
+.cohete:hover {
+  font-size: 20px;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MODULO CSS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/FaviconCss.png" />
+    <link rel="apple-touch-icon" href="assets/FaviconCss.png" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <article id="inicio">
+      <h1>APRENDIENDO CSS</h1>
+      <p><i> Cascading Style Sheets</i> Hojas de estilo en cascada</p>
+      <h2>Bienvenido a mi pagina 2.0</h2>
+
+      <h3>Contenido del curso</h3>
+      <ul>
+        <li><a href="index.html#selectores_basicos">Selectores Basicos</a></li>
+        <li>
+          <a href="index.html#selectores_avanzados">Selectores Avanzados</a>
+        </li>
+        <li><a href="index.html#pseudoclases">PseudoClases</a></li>
+      </ul>
+    </article>
+    <hr />
+    <article id="selectores_basicos">
+      <h2>Selectores Basicos</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, id
+        voluptatem hic cupiditate nobis labore culpa dolor debitis itaque dicta
+        exercitationem beatae sapiente aperiam, voluptatum commodi voluptas,
+        animi possimus. Excepturi?
+      </p>
+      <p id="parrafo-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem velit
+        iusto nostrum repellendus, assumenda tenetur debitis! Ratione porro
+        reiciendis perferendis, vitae corporis mollitia vel eos nam impedit
+        doloremque iusto modi.
+      </p>
+      <p class="text-30 bg-darkblue">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam error
+        ratione itaque adipisci eum ullam nobis quod totam qui, ab asperiores
+        vitae nisi nostrum et sit veritatis quibusdam laborum consectetur?
+      </p>
+      <p class="text-35 bg-steelblue text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed
+        voluptas repellendus doloribus amet tempore perspiciatis harum obcaecati
+        illo esse laboriosam animi, expedita odit molestias! Quis temporibus cum
+        exercitationem impedit.
+      </p>
+      <p class="text-40 bg-darkblue text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi
+        voluptatibus, in totam deleniti et assumenda sequi fugiat? Dicta
+        quibusdam aliquam molestias quos architecto porro perferendis
+        repudiandae sint reiciendis expedita?
+      </p>
+      <a href="index.html#inicio" class="cohete">🚀</a>
+    </article>
+    <hr />
+    <article id="selectores_avanzados">
+      <h2>Selectores Avanzados</h2>
+      <h3>Selector de Hijos</h3>
+      <h4>Hijos Directos</h4>
+      <ul class="hijos_directos">
+        <li><b>Invierno</b></li>
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+      </ul>
+      <br />
+      <h4>Hijos Descendientes</h4>
+      <ul class="hijos_descendientes">
+        <li><b>Invierno</b></li>
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+      </ul>
+
+      <h3>Selectores de Hermanos</h3>
+      <h4>Selector de hermanos (general)</h4>
+      <ul>
+        <li><b>Invierno</b></li>
+        <li class="hermanos_general"><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+      </ul>
+      <h4>Selector de hermanos (adyacente)</h4>
+      <ul>
+        <li><b>Invierno</b></li>
+        <li class="hermanos_adyacente"><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+      </ul>
+      <h3>Selector de Atributos</h3>
+      <nav class="selectores-atributos">
+        <ul>
+          <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+          <li>
+            <a
+              class="menu-item cursos button"
+              href="https://jonmircha.com/cursos"
+              target="_blank"
+              >Cursos</a
+            >
+          </li>
+          <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+          <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+          <li>
+            <a
+              class="menu item ahora button"
+              href="https://jonmircha.com/ahora"
+              target="_blank"
+              >Ahora</a
+            >
+          </li>
+          <li>
+            <a
+              class="menu-item notas button"
+              href="http://jonmircha.com/notas"
+              target="_blank"
+              >Notas</a
+            >
+          </li>
+          <li><a href="index.html#inicio">Regresar al Temario</a></li>
+        </ul>
+      </nav>
+      <a href="index.html#inicio" class="cohete">🚀</a>
+    </article>
+    <hr />
+    <article id="pseudoclases">
+      <h2>PseudoClases</h2>
+      <form class="form-pseudoclases">
+        <input
+          type="text"
+          name="Nombre"
+          placeholder="Escribe tu nombre"
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="correo"
+          placeholder="Escribe tu email"
+          required
+        />
+        <br />
+        <input type="submit" name="enviar" />
+      </form>
+      <br />
+      <nav class="menu-pseudoclases">
+        <a href="#seccion1">Enlace1</a>
+        <a href="#seccion2">Enlace2</a>
+        <a href="#seccion3">Enlace3</a>
+        <a href="#seccion4">Enlace 4</a>
+      </nav>
+      <h3>Parrafo creciente</h3>
+      <p class="ppseudoclases">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem
+        recusandae porro aut, autem distinctio quibusdam consequuntur quas odio?
+        Itaque quia minima labore perferendis aliquid laborum, possimus odio
+        provident reprehenderit.
+      </p>
+      <a href="index.html#inicio" class="cohete">🚀</a>
+    </article>
+  </body>
+</html>
