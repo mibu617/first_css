@@ -224,3 +224,14 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos
   width: 300px;
   display: block;
 }
+
+.pmiguel {
+  font-family: Verdana;
+  color: blue;
+  background-color: brown;
+  font-size: 50px;
+}
+
+#idmiguel {
+  color: red;
+}
