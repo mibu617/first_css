@@ -15,22 +15,26 @@ Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
 */
 
 h1 {
-  width: 300px;
-  height: 200px;
-  color: azure;
+  /* width: 800px;
+  height: 40px; */
+  color: yellowgreen;
   font-family: cursive;
-  font-style: italic;
   font-size: 35px;
-  background-color: darkcyan;
-  /* border-width: 5px;
-  border-style: dashed;
-  border-color: red; */
-  border: 5px dashed red;
-  border-top-color: mediumblue;
-  padding: 20px;
+  background-color: maroon;
+  border: 5px dashed darkgoldenrod;
+  border-top-color: coral;
+  padding: 40px;
   text-align: center;
 }
-
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  color: olive;
+}
+p.caja-cero {
+  margin: 100px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .caja-uno,
 .caja-dos {
   margin: 20px 40px 30px 100px;
@@ -64,4 +68,170 @@ h1 {
   background-color: darkred;
   color: gold;
   border: 5px double gold;
+}
+/* 
+Caja de Línea
+  - Ocupan el espacio necesario para mostrar su contenido.
+  - No tienen dimensiones modificables (alto, ancho).
+  - Permiten otros elementos a su lado.
+  - Padding y margin solo empujan a elementos adyacentes en horizontal, NUNCA EN VERTICAL.
+Caja de Bloque
+  - Ocupan todo el ancho disponible, lo que genera saltos de línea.
+  - Tienen dimensiones modificables (alto, ancho).
+  - No permiten otros elementos a su lado (aunque especifique un ancho, siguen ocupando todo el espacio disponible a lo ancho, generando saltos de línea).
+*/
+
+.caja-linea,
+.caja-bloque {
+  background-color: darkcyan;
+  color: white;
+  width: 500px;
+  height: 250px;
+  border: medium solid black;
+  padding: 16px;
+}
+
+.caja-bloque {
+  margin: 32px;
+  display: block;
+}
+
+.caja-linea {
+  margin: 48px;
+  display: inline;
+}
+/* 
+Propiedad Display
+  inline
+  block
+  inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto y ancho)
+  none
+  table
+  list-item
+  flex - ve mi curso de Flexbox CSS
+  grid - ve mi curso de Grid CSS
+*/
+.caja-none,
+.caja-linea-bloque,
+.caja-hidden {
+  background-color: darkolivegreen;
+  color: white;
+  width: 600px;
+  height: 300px;
+  border: medium solid black;
+}
+
+.caja-linea-bloque {
+  display: inline-block;
+}
+
+.caja-none {
+  display: none;
+}
+
+.caja-hidden {
+  visibility: hidden;
+}
+
+.overflow {
+  height: 100px;
+  width: 200px;
+  color: yellow;
+  background-color: black;
+  overflow: auto;
+}
+/* 
+Tamaño de Caja
+*/
+
+.box-sizing-content,
+.box-sizing-border {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(0, 255, 8);
+  box-sizing: content-box;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  border: thick solid black;
+  /* w 500 + 10 + 10 + 5 + 5 = 530 */
+  /* h 250 + 10 + 10 + 5 +5  = 280 */
+}
+
+.box-sizing-border {
+  box-sizing: border-box;
+}
+
+.container-col-3 {
+  color: aliceblue;
+  background-color: darkblue;
+  width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.container-col-3 > * {
+  box-sizing: border-box;
+  width: 200px;
+  border: thin solid white;
+  padding: 10px;
+  float: left;
+}
+/* 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+apply a natural box layout model to all elements, but allowing components to change
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Floats */
+.container-floats {
+  background-color: cornflowerblue;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+/* Colapso de Márgenes Verticales */
+.margin-collapse {
+  background-color: rgb(228, 194, 3);
+}
+
+.margin-collapse section {
+  border: thin solid black;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.margin-collapse span {
+  border: thin solid black;
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Centrado de Cajas */
+.sitio-web {
+  color: gainsboro;
+  border: thin solid black;
+  background-color: rgb(76, 0, 76);
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 0 auto; */
 }
