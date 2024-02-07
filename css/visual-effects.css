@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.box {
+  border: thick solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  width: 300px;
+  height: 200px;
+}
+
+.shadows {
+  color: navy;
+  font-size: 2rem;
+  text-align: center;
+  /* box-shadow: mov-x mov-y blur-radius spread-blur color inset/outset; */
+  box-shadow: 1rem 1rem 1rem 1rem;
+  box-shadow: -1rem -1rem 1rem 1rem;
+  box-shadow: 1rem 1rem 1rem 1rem #0005;
+  box-shadow: 1rem 1rem 1rem 1rem #f00 inset;
+  box-shadow: 1rem 1rem 2rem 0.5rem #0007;
+  /* text-shadow: mov-x mov-y blur-radius color; */
+  text-shadow: -1rem -1rem 0.5rem hotpink;
+}
+
+.shadows-multiple {
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 1rem 1rem 1rem 1rem #0005, 1rem 1rem 1rem 1rem #f00 inset,
+    -0.5rem -0.5rem 0.5rem 2rem hotpink;
+  text-shadow: -1rem -1rem 0.5rem navy, 1rem 1rem 0.5rem greenyellow;
+}
+
+.drop-shadow {
+  width: 600px;
+  height: auto;
+}
+
+.drop-shadow img {
+  max-width: 100%;
+  height: auto;
+  /* filter: drop-shadow(mov-x mov-y blur-radius color); */
+  box-shadow: 1rem 1rem 1rem 1rem #f00;
+  filter: drop-shadow(1rem 1rem 1rem rgb(0, 204, 255));
+  filter: drop-shadow(1rem 1rem 1rem rgb(4, 28, 48));
+}
+
+.linear-gradient {
+  background-image: linear-gradient(red, green);
+  background-image: linear-gradient(red, green, blue);
+  background-image: linear-gradient(0deg, red, green, blue);
+  background-image: linear-gradient(20deg, red, green, blue);
+  background-image: linear-gradient(45deg, red, green, blue);
+  background-image: linear-gradient(90deg, red, green, blue);
+  background-image: linear-gradient(180deg, red, green, blue);
+  background-image: linear-gradient(270deg, red, green, blue);
+  background-image: linear-gradient(360deg, red, green, blue);
+  background-image: linear-gradient(to right, red, green, blue);
+  background-image: linear-gradient(to top, red, green, blue);
+  background-image: linear-gradient(to bottom, red, green, blue);
+  background-image: linear-gradient(to left, red, green, blue);
+  background-image: linear-gradient(to top left, red, green, blue);
+  background-image: linear-gradient(to top right, red, green, blue);
+  background-image: linear-gradient(to bottom left, red, green, blue);
+  background-image: linear-gradient(to bottom right, red, green, blue);
+  background-image: linear-gradient(90deg, red 30%, green 60%, blue);
+  background-image: linear-gradient(yellow 40%, blue 41% 71%, red 72%);
+}
+
+.radial-gradient {
+  background-image: radial-gradient(cyan, magenta);
+  background-image: radial-gradient(cyan, magenta, yellow);
+  background-image: radial-gradient(circle 4rem, cyan, magenta, yellow);
+  background-image: radial-gradient(circle 4rem, cyan 30%, magenta 80%, yellow);
+  background-image: radial-gradient(
+    circle 100px,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at top,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at bottom,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at left,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at right,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at center,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at top left,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at top right,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at bottom left,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px at bottom right,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    circle 100px,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(
+    ellipse 50px 100px,
+    cyan 30%,
+    magenta 60%,
+    yellow 90%
+  );
+  background-image: radial-gradient(circle 100px, red 50%, white 50%);
+}
+.conic-gradient {
+  background-image: conic-gradient(red, green);
+  background-image: conic-gradient(red, green, blue);
+  background-image: conic-gradient(red 0% 50%, green 60%, blue 80%);
+  background-image: conic-gradient(
+    red 0deg 90deg,
+    green 120deg 240deg,
+    blue 270deg
+  );
+  background-image: conic-gradient(
+    from 90deg,
+    red 0deg 120deg,
+    blue 120deg 240deg,
+    white 240deg
+  );
+}
+
+.repeat-gradient-linear {
+  background-image: repeating-linear-gradient(
+    red 0 10px,
+    green 10px 20px,
+    blue 20px 30px
+  );
+  background-image: repeating-linear-gradient(
+    45deg,
+    red 0 10px,
+    green 10px 20px,
+    blue 20px 30px
+  );
+  background-image: repeating-linear-gradient(
+    90deg,
+    red 0 10px,
+    green 10px 20px,
+    blue 20px 30px
+  );
+}
+
+.repeat-gradient-radial {
+  background-image: repeating-radial-gradient(
+    circle 4rem,
+    cyan 0 10px,
+    magenta 10px 20px,
+    yellow 20px 30px
+  );
+}
+
+.repeat-gradient-conic {
+  background-image: repeating-conic-gradient(
+    red 0 8%,
+    yellow 8% 16%,
+    black 16% 24%
+  );
+}
+
+.chart-gradient {
+  background-image: conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+}
+
+.donut-gradient {
+  background-image: radial-gradient(white 30%, black 31%, transparent 33%),
+    conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+}
